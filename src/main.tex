@@ -4,19 +4,45 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.9]{geometry}
+\usepackage[ngerman,english]{babel}
 \usepackage{graphicx}
 \graphicspath{{graphics/}}
 
 \name{Maxim}{Schuwalow}
 \address{Trusetaler Straße 92}{12687 Berlin}{Germany}
 \email{maxim.schuwalow@gmail.com}
-\social[linkedin]{mschuwalow}
-\social[github]{mschuwalow}
+\social[linkedin][linkedin.com/in/mschuwalow]{linkedin.com/in/mschuwalow}
+\social[github][github.com/mschuwalow]{github.com/mschuwalow}
 \phone[mobile]{+49~(1520)~3154702}
 \photo[80pt][0.4pt]{picture}
 
 \begin{document}
 \makecvtitle
+
+%=========================Body=============================
+\section{Experience}
+\cventry{Dec 2020 -- present}
+        {Senior Scala Engineer}
+        {LiveIntent}
+        {Berlin}
+        {}
+        {Microservices architecture on kubernetes}
+\cventry{Oct 2019 -- Dec 2020}
+        {Software Engineer}
+        {Zalando SE}
+        {Berlin}
+        {}
+        {Implementation of the pipeline responsible for onboarding partner articles into the Zalando catalog \\
+         Scala/Haskell microservices communicating using Zalando's Nakadi eventbus}
+\cventry{Feb 2017 -- Oct 2019}
+        {Data Engineer}
+        {Agile IM}
+        {Osnabrück}
+        {}
+        {Streaming analytics / machine learning pipelines using Apache Kafka and Flink \\
+         Hybrid Scala / Python machine learning applications using Py4J and Flink \\
+         Microservices in Python and Scala, running on k8s \\
+         Time series modeling and forecasting (Random Forests, LSTMs, MLPs)}
 
 \section{Education}
 \cventry{October 2015 -- present}
@@ -25,104 +51,50 @@
         {Osnabrück}
         {}
         {Expected Final Grade: \emph{1.2}}
-\cventry{August 2006 -- July 2015}
-        {Abitur}
-        {Johannes-Brahms-Gymnasium}
-        {Pinneberg}
-        {}
-        {Final Grade: \emph{1.3}}
 
-\section{Experience}
-\cventry{October 2019 -- present}
-        {Software Engineer}
-        {Zalando SE}
-        {Berlin}
-        {}
-        {Implementation of the pipeline responsible for onboarding partner articles into the Zalando catalog.
-         \newline Scala/Haskell microservices communicating using Zalando's Nakadi eventbus.}
+\section{Talks}
+\cvitem{ZIO World 2021}
+       {Introducing an asynchronous profiler for ZIO (\httplink[recording]{https://www.youtube.com/watch?v=rdETYUc8XyI})}
+\cvitem{Functional Scala 2019}
+       {Deriving intersection types in Scala using macros (\httplink[recording]{https://www.youtube.com/watch?v=f1lzMnMQ18c})}
+\cvitem{WeAreDevelopers 2017}
+       {Presenting one of the winning solutions for \httplink[InformatiCup2017]{https://github.com/InformatiCup/InformatiCup2017}}
 
-\cventry{February 2017 -- October 2019}
-        {Data Engineer}
-        {Agile IM}
-        {Osnabrück}
-        {}
-        {Streaming analytics / machine learning pipelines using Apache Kafka and Flink.
-         \newline Hybrid Scala / Python machine learning applications using Py4J and Flink.
-         \newline Microservices in Python and Scala, running on k8s.
-         \newline Time series modeling and forecasting (Random Forests, LSTMs, MLPs).}
-
-\section{Other Projects}
-\cventry{December 2019}
-        {Functional Scala 2019}
-        {}
-        {London}
-        {}
-        {Talk about automatically deriving intersection types in Scala using macros.
-         \newline Slides can be found at \httplink[github.com/mschuwalow/functional-scala-2019]{https://github.com/mschuwalow/functional-scala-2019/blob/master/2019-functional-scala.pdf}.}
-
-\cventry{May 2017}
-        {WeAreDevelopers 2017}
-        {}
-        {Vienna}
-        {}
-        {Talk about using machine learning techniques to automatically classify GitHub repositories.}
-
-\cventry{November 2016 - March 2017}
-        {\httplink[InformatiCup2017]{https://github.com/InformatiCup/InformatiCup2017}}
-        {German Association for Computer Science}
-        {}
-        {}
-        {Classification of GitHub repositories using Deep Learning.\newline 4th place in Germany-wide competition.
-         \newline Code can be found at \httplink[github.com/toludwig/golden-lemurs] {github.com/toludwig/golden-lemurs}.}
-
-\section{Programming Languages}
+\section{Programming Languages \& Ecosystems}
 \cvitem {Scala} {
   \begin{itemize}
-    \item Good knowledge of the functional ecosystem.
+    \item Good knowledge of the functional ecosystem
     \item Contributions to:
     \begin{itemize}
         \item ZIO and ecosystem
         \item cats ecosystem
-        \vspace{-0.3cm}
     \end{itemize}
   \end{itemize}
 }
-
 \cvitem {Haskell} {
   \begin{itemize}
-      \item Intermediate knowledge of the language and common libraries.
-      \vspace{-0.3cm}
+      \item Intermediate knowledge of the language and common libraries
   \end{itemize}
 }
-
 \cvitem {Python} {
   \begin{itemize}
-    \item Knowledge of most common machine learning frameworks.
-    \item Some experience writing Cython C-extensions.
-    \vspace{-0.3cm}
+    \item Knowledge of most common machine learning frameworks
+    \item Some experience writing Cython C-extensions
   \end{itemize}
 }
 
-\section{Languages}
-\cvitem{English}{fluent -- Business Level.}
-\cvitem{German}{native.}
+\section{Language Proficiency}
+\cvlanguage{English}{Full Professional}{}
+\cvlanguage{German}{Native}{}
 
 %=========================Signature=============================
 \emptysection{}\closesection
 \vfill
-\vspace{0.5cm}
-\begin{minipage}{0.6\textwidth}
-\begin{center}\vspace{-0.1cm}\hspace{-1.3cm}
-\phantom{\includegraphics[width=0.4\textwidth]{signature}}\\
-\end{center}
-\end{minipage}
-\begin{minipage}{0.4\textwidth}
-\begin{center}\vspace{-0.1cm}\hspace{-1.3cm}
-\includegraphics[width=0.8\textwidth]{signature}\\
-\end{center}
 \vspace{-0.5cm}
-\hspace{1.1cm} Maxim~Schuwalow, \today
-\vspace{0.5cm}
-\end{minipage}
+\begin{flushright}
+  \includegraphics[width=0.4\textwidth]{signature}
+  ~\\
+  Berlin, \today
+\end{flushright}
 
 \end{document}

@@ -8,7 +8,8 @@
         pkgs = nixpkgs.legacyPackages.${system};
 
         texliveEnv = pkgs.texlive.combine {
-          inherit (pkgs.texlive) scheme-medium moderncv fontawesome;
+          inherit (pkgs.texlive)
+            scheme-medium moderncv fontawesome ebgaramond fontaxes;
         };
 
         mkPackage = isShell:

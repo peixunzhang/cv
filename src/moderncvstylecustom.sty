@@ -5,12 +5,11 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-
 %-------------------------------------------------------------------------------
 %                identification
 %-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{moderncvstylefancy}[2015/07/28 v2.0.0 modern curriculum vitae and letter style scheme: fancy]
+\ProvidesPackage{moderncvstylecustom}[2015/07/28 v2.0.0 modern curriculum vitae and letter style scheme: fancy]
 
 \DeclareOption*{}% avoid choking on unknown options
 \ExecuteOptions{}
@@ -33,32 +32,33 @@
 % symbols
 \moderncvicons{awesome}
 
-
 %-------------------------------------------------------------------------------
 %                header, body & footer
 %-------------------------------------------------------------------------------
 \moderncvhead{3}
-\moderncvbody{5}
+\moderncvbody{3}
 
-% patch head. only use with banking style
-\patchcmd{\makehead}
-  {\hfil}
-  {\hspace*{0.15\textwidth}}
-  {}
-  {}
-\patchcmd{\makehead}
-  {\setlength{\makeheaddetailswidth}{0.8\textwidth}}
-  {\setlength{\makeheaddetailswidth}{0.67\textwidth}}
-  {}
-  {}
-\patchcmd{\makehead}
-  {\\[2.5em]}
-  {{\color{color1}\hfil\raisebox{-2cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}
-  {}
-  {}
-
+\AtBeginDocument{
+  \ifdefined\@photo
+    % patch head. only use with banking style
+    \patchcmd{\makehead}
+      {\hfil}
+      {\hspace*{0.15\textwidth}}
+      {}
+      {}
+    \patchcmd{\makehead}
+      {\setlength{\makeheaddetailswidth}{0.8\textwidth}}
+      {\setlength{\makeheaddetailswidth}{0.67\textwidth}}
+      {}
+      {}
+    \patchcmd{\makehead}
+      {\\[2.5em]}
+      {{\color{color1}\hfil\raisebox{-2cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}
+      {}
+      {}
+  \fi
+}
 
 \endinput
-
 
 %% end of file `moderncvstylefancy.sty'.
