@@ -8,8 +8,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
 
         texliveEnv = pkgs.texlive.combine {
-          inherit (pkgs.texlive)
-            xstring;
+          inherit (pkgs.texlive) scheme-medium moderncv fontawesome;
         };
 
         mkPackage = isShell:
@@ -21,9 +20,9 @@
             name = "cv";
             src = if isShell then null else self;
 
-            makeFlags = [ "OUTPUT_DIR=$(out)" ];
-
-            dontInstall = true;
+            installPhase = ''
+              install -D build/cv.pdf $out/cv.pdf
+            '';
 
             buildInputs = with pkgs;
               [ gnumake which texliveEnv ] ++ devPackages;
